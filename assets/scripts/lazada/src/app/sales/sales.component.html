@@ -1,0 +1,34 @@
+Item name:
+<li *ngFor="let item of items">
+    {{item.name}}
+</li>
+
+
+<form [formGroup]='itemForm' (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="center-block">Name:
+            <input class="form-control" formControlName="name">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Description:
+            <input class="form-control" formControlName="description">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Quantity:
+            <input class="form-control" formControlName="quantity">
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="center-block">Price:
+            <input class="form-control" formControlName="price">
+        </label>
+    </div>
+    <dir class="form-group">
+        <button type="submit">submit</button>
+    </dir>
+</form>
+
+<p>Form value: {{ itemForm.value | json }}</p>
+<p>Form status: {{ itemForm.status | json }}</p>

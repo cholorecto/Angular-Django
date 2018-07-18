@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>lazada</title>
+  <base href="/">
+</head>
+<body>
+
+  <ui-view>Loading...</ui-view>
+  <script type="text/javascript" src="{% static 'scripts/lazada/dist/lazada/runtime.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/lazada/dist/lazada/polyfills.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/lazada/dist/lazada/styles.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/lazada/dist/lazada/vendor.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/lazada/dist/lazada/main.js' %}"></script>
+
+</body>
+</html>
