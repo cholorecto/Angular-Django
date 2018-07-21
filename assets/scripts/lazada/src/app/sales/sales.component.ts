@@ -29,7 +29,6 @@ export class SalesComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.itemForm.value);
     this.http.post(ITEM_API_URL(),this.itemForm.value)
         .subscribe(
           result => {
@@ -42,14 +41,14 @@ export class SalesComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.http.get(ITEM_API_URL())
-          .subscribe(
-              (result:any[]) => {
-                  this.items = result;
-              },
-              error => {
-                  console.log(error, 'error');
-              }
-          )
+    this.http.get(ITEM_API_URL())
+        .subscribe(
+            (result:any[]) => {
+                this.items = result;
+            },
+            error => {
+                console.log(error, 'error');
+            }
+        )
   }
 }
