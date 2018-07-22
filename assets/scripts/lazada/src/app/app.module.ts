@@ -9,11 +9,13 @@ import { UIRouterModule, UIView } from '@uirouter/angular';
 import { APP_STATES } from './app.states';
 import { routerConfigFn } from './router.config';
 import { HttpClientModule } from '@angular/common/http';
+import { EditItemsComponent } from './edit-items/edit-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SalesComponent
+    SalesComponent,
+    EditItemsComponent
   ],
   imports: [
     UIRouterModule.forRoot({

@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 
 import { SalesComponent } from './sales/sales.component';
+import { EditItemsComponent } from './edit-items/edit-items.component';
 
 export const appState = {
   name: 'app',
@@ -22,7 +23,18 @@ export const salesStates = {
   }
 };
 
+export const editItemState = {
+  name: 'app.edit-items',
+  url: '/item/{id}',
+  views: {
+    'content@app': {
+      component: EditItemsComponent
+    }
+  }
+};
+
 export const APP_STATES = [
   appState,
   salesStates,
+  editItemState,
 ];

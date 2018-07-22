@@ -1,6 +1,6 @@
 Item name:
 <li *ngFor="let item of items">
-    {{item.name}}
+    <a ui-sref="app.edit-items({id:item.id})">{{item.name}}</a>
 </li>
 
 

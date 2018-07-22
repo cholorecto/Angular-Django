@@ -45,6 +45,7 @@ export class SalesComponent implements OnInit {
         .subscribe(
             (result:any[]) => {
                 this.items = result;
+                console.log(this.items);
             },
             error => {
                 console.log(error, 'error');
