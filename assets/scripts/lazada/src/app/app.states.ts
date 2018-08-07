@@ -25,7 +25,7 @@ export const salesStates = {
 
 export const editItemState = {
   name: 'app.edit-items',
-  url: '/item/{id}',
+  url: '/item/:id',
   views: {
     'content@app': {
       component: EditItemsComponent

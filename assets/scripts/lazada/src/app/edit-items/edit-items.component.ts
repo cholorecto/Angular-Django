@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { StateService } from '@uirouter/angular';
 
 @Component({
   selector: 'app-edit-items',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditItemsComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  private sub: any;
+
+  constructor(private stateSvc: StateService) { }
 
   ngOnInit() {
+    console.log(this.stateSvc.params, 'RRRR')
   }
 
 }
